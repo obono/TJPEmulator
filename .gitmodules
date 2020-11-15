@@ -1,0 +1,6 @@
+[submodule "app/src/main/jni/simavr"]
+	path = app/src/main/jni/simavr
+	url = https://github.com/buserror/simavr.git
+[submodule "app/src/main/jni/elfutils"]
+	path = app/src/main/jni/elfutils
+	url = https://android.googlesource.com/platform/external/elfutils.git
