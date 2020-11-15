@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/prefsCategorySettings" >
+        <CheckBoxPreference
+            android:key="toolbar"
+            android:defaultValue="false"
+            android:title="@string/prefsToolbar"
+            />
+        <ListPreference
+            android:key="fps"
+            android:defaultValue="30"
+            android:title="@string/prefsFps"
+            android:entries="@array/entriesFps"
+            android:entryValues="@array/entryValuesFps"
+            />
+        <CheckBoxPreference
+            android:key="refresh"
+            android:defaultValue="false"
+            android:title="@string/prefsRefresh"
+            android:summary="@string/prefsRefreshSummary"
+            />
+        <CheckBoxPreference
+            android:key="confirm_quit"
+            android:defaultValue="true"
+            android:title="@string/prefsConfirmQuit"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/prefsCategoryInformation" >
+        <Preference
+            android:key="about"
+            android:title="@string/prefsAbout"
+            />
+        <Preference
+            android:key="license"
+            android:title="@string/prefsLicense"
+            android:summary="@string/prefsLicenseSummary"
+            />
+        <Preference
+            android:key="websites"
+            android:title="@string/prefsWebsites"
+            />
+        </PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

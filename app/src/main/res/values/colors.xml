@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="concept">#FF1655A2</color>
+    <color name="conceptVariant">#FF0B2A51</color>
+    <color name="conceptNight">#FF66B5F2</color>
+    <color name="conceptVariantNight">#FF335A79</color>
+    <color name="alternative">#FF6316A2</color>
+    <color name="alternativeVariant">#FF320B51</color>
+    <color name="alternativeNight">#FFA366F2</color>
+    <color name="alternativeVariantNight">#FF523379</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

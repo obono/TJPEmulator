@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menuMainOpen"
+        android:title="@string/menuOpen"
+        android:icon="@mipmap/ic_menu_open_flash"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuMainEeprom"
+        android:title="@string/menuEeprom"
+        android:icon="@mipmap/ic_menu_eeprom"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuMainSettings"
+        android:title="@string/menuSettings"
+        android:icon="@mipmap/ic_menu_settings"
+        app:showAsAction="ifRoom" />
+</menu>

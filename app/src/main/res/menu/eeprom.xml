@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menuEepromClear"
+        android:title="@string/menuClear"
+        android:icon="@mipmap/ic_menu_eeprom_clear"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuEepromRestore"
+        android:title="@string/menuRestore"
+        android:icon="@mipmap/ic_menu_eeprom_restore"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menuEepromBackup"
+        android:title="@string/menuBackup"
+        android:icon="@mipmap/ic_menu_eeprom_backup"
+        app:showAsAction="ifRoom" />
+</menu>

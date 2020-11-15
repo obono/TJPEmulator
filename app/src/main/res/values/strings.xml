@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appCode">OBN-A21</string>
+    <string name="appName">TJP Emulator</string>
+    <string name="appNameFilePickerRead">Choose file to load</string>
+    <string name="appNameFilePickerWrite">Choose file to save</string>
+    <string name="appNameEeprom">EEPROM</string>
+    <string name="appNameSettings">Settings</string>
+    <string name="image">Image</string>
+    <string name="fileName">filename</string>
+    <string name="menuOpen">Open Flash image</string>
+    <string name="menuReset">Reset</string>
+    <string name="menuCaptureShot">Capture screenshot</string>
+    <string name="menuCaptureMovie">Capture movie</string>
+    <string name="menuEeprom">Control EEPROM</string>
+    <string name="menuSettings">Settings</string>
+    <string name="menuClear">Clear EEPROM</string>
+    <string name="menuBackup">Backup EEPROM</string>
+    <string name="menuRestore">Restore EEPROM</string>
+    <string name="menuUpper">Upper</string>
+    <string name="menuBack">Back</string>
+    <string name="menuQuit">Quit application</string>
+    <string name="messageEmulateFailed">Failed to emulate!</string>
+    <string name="messageNoFiles">No files</string>
+    <string name="messageInvalid">Invalid file name</string>
+    <string name="messageNewFile">New file</string>
+    <string name="messageLoadSucceeded">Succeeded to load</string>
+    <string name="messageLoadFailed">Failed to load!</string>
+    <string name="messageSaveSucceeded">Succeeded to save</string>
+    <string name="messageSaveFailed">Failed to save!</string>
+    <string name="messageDownloading">Downloading&#8230;</string>
+    <string name="messageDownloadFailed">Failed to download!</string>
+    <string name="messageCaptureShot">Saved screenshot as \&quot;%s\&quot;</string>
+    <string name="messageCaptureStart">Capturing&#8230;</string>
+    <string name="messageCaptureMovie">Saved movie as \&quot;%s\&quot;</string>
+    <string name="messageCaptureFailed">Failed to capture!</string>
+    <string name="messageConfirmLoad">Are you sure to load?</string>
+    <string name="messageConfirmClear">Are you sure to clear?</string>
+    <string name="messageConfirmQuit">Are you sure to quit?</string>
+    <string name="prefsCategorySettings">Emulator settings</string>
+    <string name="prefsCategoryInformation">Information</string>
+    <string name="prefsToolbar">Show toolbar</string>
+    <string name="prefsFps">Emulation speed</string>
+    <string name="prefsRefresh">Decimate refreshing</string>
+    <string name="prefsRefreshSummary">It prevents tearing, but doesn\'t support partial updating.</string>
+    <string name="prefsConfirmQuit">Confirm on quit</string>
+    <string name="prefsAbout">About</string>
+    <string name="prefsLicense">License</string>
+    <string name="prefsLicenseSummary">GNU General Public License v3.0</string>
+    <string name="prefsWebsites">TinyJoypad websites</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
