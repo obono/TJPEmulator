@@ -82,6 +82,7 @@ static bool     yield, is_refresh_on_round;
 
 /*---------------------------------------------------------------------------*/
 
+#ifdef __ANDROID__
 static void android_logger(avr_t * avr, const int level, const char * format, va_list ap)
 {
     if (!avr || avr->log >= level) {
@@ -89,6 +90,7 @@ static void android_logger(avr_t * avr, const int level, const char * format, va
         __android_log_vprint(android_level, LOG_TAG, format, ap);
     }
 }
+#endif
 
 static void avr_callback_sleep_sync(avr_t *avr, avr_cycle_count_t how_long)
 {
@@ -315,7 +317,9 @@ static void write_hook(struct avr_t *avr, avr_io_addr_t addr, uint8_t value, voi
 
 int tjp_avr_setup(const char *hex_file_path)
 {
+#ifdef __ANDROID__
     avr_global_logger_set(android_logger);
+#endif
     my_avr = avr_make_mcu_by_name("attiny85");
     if (!my_avr) {
         LOGE("Failed to make AVR\n");

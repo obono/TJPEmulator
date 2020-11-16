@@ -17,24 +17,34 @@
  */
 
 #include <stdbool.h>
+#ifdef __ANDROID__
 #include <android/log.h>
+#endif
 
 #define OLED_WIDTH_PX   128
 #define OLED_HEIGHT_PX  64
 #define EEPROM_SIZE     512
 
 #define FPS             30
-#define FRAME_PERIOD_US (1000000 / FPS)
+#define FRAME_PERIOD_US (1000000UL / FPS)
 
 #define SOUND_RATE      32000
 #define SOUND_BUFFER_SIZE 2048
 
+#ifdef __ANDROID__
 #define LOG_TAG "TJPEmulator"
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
 #define LOGW(...) __android_log_print(ANDROID_LOG_WARN, LOG_TAG, __VA_ARGS__)
 #define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
 #define LOGV(...)
+#else
+#define LOGE(...) printf(__VA_ARGS__)
+#define LOGW(...) printf(__VA_ARGS__)
+#define LOGI(...) printf(__VA_ARGS__)
+#define LOGD(...) printf(__VA_ARGS__)
+#define LOGV(...)
+#endif
 
 enum button_e {
     BTN_UP = 0,
