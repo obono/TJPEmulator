@@ -2,5 +2,8 @@
 .gradle
 .idea
 .DS_Store
+app/src/main/jni/tjpemulator
 build
 local.properties
+obj*
+release
