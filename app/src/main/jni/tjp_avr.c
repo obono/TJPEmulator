@@ -48,7 +48,7 @@
 #define SSD1306_HEADER_DATA     0x40
 
 #define SOUND_VALUE_BASE    0x80
-#define SOUND_VALUE_MAX     0x40
+#define SOUND_VALUE_MAX     0x20
 
 #define LUMA_COLOR(a)   ((uint8_t)(a) << 24 | 0xFFFFFF)
 #define TRANSPARENT     0x00000000
@@ -189,6 +189,10 @@ static void ssd1306_write_command(ssd1306_t *part)
     } else {
         // Multi-byte command setting
         ssd1306_update_setting(part);
+        if (my_ssd1306.addr_mode != SSD1306_ADDR_MODE_PAGE) {
+            my_ssd1306.addr_mode = SSD1306_ADDR_MODE_PAGE;
+            LOGW("Force SSD1306.addr_mode to ADDR_MODE_PAGE\n");
+        }
     }
 }
 
@@ -200,13 +204,17 @@ static void ssd1306_write_data(ssd1306_t *part)
     // Scroll the cursor
     if (++(part->cursor.column) >= SSD1306_VIRT_COLUMNS) {
         part->cursor.column = 0;
-        if ( part->addr_mode == SSD1306_ADDR_MODE_HORZ &&
-                (++(part->cursor.page) >= SSD1306_VIRT_PAGES)) {
+        if (++(part->cursor.page) >= SSD1306_VIRT_PAGES) {
             part->cursor.page = 0;
-            if (is_refresh_on_round) {
-                update_lumamap(&my_ssd1306);
-            }
         }
+    }
+    if (is_refresh_on_round) {
+        static int lastPosition = 0;
+        int currentPosition = part->cursor.page * SSD1306_VIRT_COLUMNS + part->cursor.column;
+        if (currentPosition < lastPosition) {
+            update_lumamap(&my_ssd1306);
+        }
+        lastPosition = currentPosition;
     }
 }
 
