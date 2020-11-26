@@ -392,6 +392,14 @@ int tjp_avr_setup(const char *hex_file_path)
     avr_cycle_timer_register_usec(my_avr, FRAME_PERIOD_US, frame_timer_callback, NULL);
     avr_cycle_timer_register(my_avr, F_CPU / SOUND_RATE, sound_timer_callback, NULL);
 
+    /* Trick for timer1 */
+    struct mcu_t *mcu = (struct mcu_t *) my_avr;
+    avr_regbit_t regbit = AVR_IO_REGBIT(TCCR1, CTC1);
+    avr_timer_wgm_t wgm = AVR_TIMER_WGM_CTC();
+    mcu->timer1.wgm[0] = regbit;
+    mcu->timer1.wgm_op[1] = wgm;
+    mcu->timer1.comp[AVR_TIMER_COMPA].r_ocr = OCR1C;
+
     LOGI("Setup AVR\n");
     return 0;
 }
