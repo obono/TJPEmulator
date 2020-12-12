@@ -16,5 +16,6 @@
     </string-array>
     <string-array name="bookmarkArray">
         <item>https://www.tinyjoypad.com/tinyjoypad_attiny85</item>
+        <item>https://github.com/obono/TinyJoypadWorks</item>
     </string-array>
 </resources>
